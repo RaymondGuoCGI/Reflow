@@ -1,0 +1,11 @@
+{
+  "name": "reflow",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/content.spec.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}

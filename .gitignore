@@ -3,3 +3,5 @@ node_modules/
 package-lock.json
 Reference001.png
 Reference002.png
+docs/
+tests/

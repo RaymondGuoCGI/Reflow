@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Reflow",
+  "version": "0.1.0",
+  "description": "Remove promoted cards on Pinterest and keep the grid reflowed.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://*.pinterest.com/*",
+    "*://*.pinterest.co.uk/*",
+    "*://*.pinterest.de/*",
+    "*://*.pinterest.jp/*",
+    "*://*.pinterest.fr/*",
+    "*://*.pinterest.es/*",
+    "*://*.pinterest.it/*",
+    "*://*.pinterest.ca/*",
+    "*://*.pinterest.com.mx/*",
+    "*://*.pinterest.co/*",
+    "*://*.pinterest.com.br/*",
+    "*://*.pinterest.co.kr/*",
+    "*://*.pinterest.com.au/*",
+    "*://*.pinterest.co.in/*"
+  ],
+  "action": {
+    "default_title": "Reflow",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.pinterest.com/*",
+        "*://*.pinterest.co.uk/*",
+        "*://*.pinterest.de/*",
+        "*://*.pinterest.jp/*",
+        "*://*.pinterest.fr/*",
+        "*://*.pinterest.es/*",
+        "*://*.pinterest.it/*",
+        "*://*.pinterest.ca/*",
+        "*://*.pinterest.com.mx/*",
+        "*://*.pinterest.co/*",
+        "*://*.pinterest.com.br/*",
+        "*://*.pinterest.co.kr/*",
+        "*://*.pinterest.com.au/*",
+        "*://*.pinterest.co.in/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+body { font-family: system-ui, sans-serif; margin: 0; padding: 12px; }
+.card { min-width: 240px; }
+.row { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
+button { padding: 6px 10px; }

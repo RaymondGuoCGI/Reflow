@@ -27,3 +27,20 @@ test('removes promoted cards based on structural badge', () => {
   assert.equal(removed, 1);
   assert.equal(remaining.length, 1);
 });
+
+test('shouldRunForPage respects enabled and whitelist', () => {
+  const { shouldRunForPage } = require('../content.js');
+
+  assert.equal(
+    shouldRunForPage({ enabled: false, whitelist: [], hostname: 'www.pinterest.com' }),
+    false
+  );
+  assert.equal(
+    shouldRunForPage({ enabled: true, whitelist: ['www.pinterest.com'], hostname: 'www.pinterest.com' }),
+    false
+  );
+  assert.equal(
+    shouldRunForPage({ enabled: true, whitelist: [], hostname: 'www.pinterest.com' }),
+    true
+  );
+});
